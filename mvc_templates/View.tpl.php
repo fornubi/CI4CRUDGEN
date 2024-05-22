@@ -20,6 +20,7 @@
         <table id="data_table" class="table table-bordered table-striped">
             <thead>
                 <tr>
+                    <th>No.</th>
                     @@@htmlDataTable@@@
                     <th>Aksi</th>
                 </tr>

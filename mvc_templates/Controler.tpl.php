@@ -38,6 +38,7 @@ class @@@uControlerName@@@ extends BaseController
 
 		$result = $this->@@@modelName@@@->select()->findAll();
 		
+		$counter = 1;
 		foreach ($result as $key => $value) {
 
 			$ops = '<a class="btn btn-sm dropdown-toggle btn-info" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-grip-horizontal  fa-fw"></i></a>';
@@ -47,6 +48,7 @@ class @@@uControlerName@@@ extends BaseController
 			$ops .= '</div>';
 
 			$data['data'][$key] = array(
+				$counter++,
 				@@@ciDataTable@@@
 				$ops				
 			);
