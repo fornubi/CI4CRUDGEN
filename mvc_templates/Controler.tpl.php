@@ -40,8 +40,8 @@ class @@@uControlerName@@@ extends BaseController
 		
 		foreach ($result as $key => $value) {
 
-			$ops = '<a class="btn btn-sm dropdown-toggle btn-info" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-envelope fa-fw"></i></a>';
-			$ops .= '<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">';
+			$ops = '<a class="btn btn-sm dropdown-toggle btn-info" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-grip-horizontal  fa-fw"></i></a>';
+			$ops .= '<div class="dropdown-list dropdown-menu dropdown-menu-right shadow" aria-labelledby="messagesDropdown">';
 			$ops .= '    <a class="dropdown-item text-info " onClick="save(' . $value->@@@primaryKey@@@ . ')"><i class="fas fa-solid fa-edit "></i> Edit</a>';
 			$ops .= '    <a class="dropdown-item text-danger " onClick="remove(' . $value->@@@primaryKey@@@ . ')"><i class="fas fa-solid fa-trash "></i> Delete</a>';
 			$ops .= '</div>';
