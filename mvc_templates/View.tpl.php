@@ -99,11 +99,11 @@ function getSubmitText() {
     return submitText;
 }
 
-function save(@ @ @primaryKey @ @ @) {
+function save(@@@primaryKey@@@) {
     // reset the form 
     $("#data-form")[0].reset();
     $(".form-control").removeClass('is-invalid').removeClass('is-valid');
-    if (typeof @ @ @primaryKey @ @ @ === 'undefined' || @ @ @primaryKey @ @ @ < 1) { //add
+    if (typeof @@@primaryKey@@@ === 'undefined' || @@@primaryKey@@@ < 1) { //add
         urlController = '<?= base_url($controller . "/add") ?>';
         submitText = '<?= lang("App.save") ?>';
         $('#model-header').removeClass('bg-info').addClass('bg-success');
@@ -117,7 +117,7 @@ function save(@ @ @primaryKey @ @ @) {
             url: '<?php echo base_url($controller . "/getOne") ?>',
             type: 'post',
             data: {
-                @ @ @primaryKey @ @ @: @ @ @primaryKey @ @ @
+                @@@primaryKey@@@: @@@primaryKey@@@
             },
             dataType: 'json',
             success: function(response) {
@@ -126,7 +126,7 @@ function save(@ @ @primaryKey @ @ @) {
                 $("#form-btn").text(submitText);
                 $('#data-modal').modal('show');
                 //insert data to form
-                @ @ @htmlEditFields @ @ @
+                @@@htmlEditFields@@@
             }
         });
     }
@@ -221,7 +221,7 @@ function save(@ @ @primaryKey @ @ @) {
 
 
 
-function remove(@ @ @primaryKey @ @ @) {
+function remove(@@@primaryKey@@@) {
     Swal.fire({
         title: "<?= lang("App.remove-title") ?>",
         text: "<?= lang("App.remove-text") ?>",
@@ -238,7 +238,7 @@ function remove(@ @ @primaryKey @ @ @) {
                 url: '<?php echo base_url($controller . "/remove") ?>',
                 type: 'post',
                 data: {
-                    @ @ @primaryKey @ @ @: @ @ @primaryKey @ @ @
+                    @@@primaryKey@@@: @@@primaryKey@@@
                 },
                 dataType: 'json',
                 success: function(response) {

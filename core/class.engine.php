@@ -278,10 +278,8 @@ class Engine
 				$htmlInputs .= '							<div class="col-md-12">
 								<div class="form-group mb-3">
 									<label for="'.$inputName.'" class="col-form-label"> '.$inputlabel.': '.$htmlInputRequired.'</label>
-									<select id="'.$inputName.'" name="'.$inputName.'" class="form-select" '.$inputRequired.'>
-										<option value="select1">select1</option>
-										<option value="select2">select2</option>
-										<option value="select3">select3</option>
+									<select id="'.$inputName.'" name="'.$inputName.'" class="form-select form-control" '.$inputRequired.'>
+										<option></option>
 									</select>
 								</div>
 							</div>'."\n";
