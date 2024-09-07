@@ -1,1 +1,4 @@
 .vscode/launch.json
+downloads/Controllers/*
+downloads/Models/*
+downloads/Views/*
